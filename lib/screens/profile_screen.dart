@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:grad_login/app_state.dart';
 import 'package:provider/provider.dart';
 
@@ -54,52 +53,55 @@ class _ProfilesState extends State<Profiles> {
                       ),
                       //sliver appBar
                       const Spacer(),
-                      IconButton(
-                        icon: SvgPicture.asset(
-                          'assets/icons/notification-outlined.svg',
-                          color: Theme.of(context).colorScheme.secondary,
-                          height: 24,
-                          width: 24,
-                        ),
-                        onPressed: () {
-                          // handle notifications button press
-                        },
-                      ),
-                      DropdownButton<Language>(
-                        underline: const SizedBox(),
-                        icon: const Icon(
-                          Icons.language,
-                          color: Colors.white,
-                        ),
-                        onChanged: (Language? language) async {
-                          if (language != null) {
-                            // log(language.languageCode.toString());
-                            // Locale _locale =
-                            // await setLocale(language.languageCode);
-                            // log('locale::${_locale.toString()}');
-                            // MyApp.setLocale(context, _locale);
-                            MyApp.setLocale(
-                                context, Locale(language.languageCode));
-                          }
-                        },
-                        items: Language.languageList()
-                            .map<DropdownMenuItem<Language>>(
-                              (e) => DropdownMenuItem<Language>(
-                                value: e,
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceAround,
-                                  children: <Widget>[
-                                    Text(
-                                      e.flag,
-                                      style: const TextStyle(fontSize: 30),
-                                    ),
-                                    Text(e.name)
-                                  ],
+                      // IconButton(
+                      //   icon: SvgPicture.asset(
+                      //     'assets/icons/notification-outlined.svg',
+                      //     color: Theme.of(context).colorScheme.secondary,
+                      //     height: 24,
+                      //     width: 24,
+                      //   ),
+                      //   onPressed: () {
+                      //     // handle notifications button press
+                      //   },
+                      // ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 12),
+                        child: DropdownButton<Language>(
+                          underline: const SizedBox(),
+                          icon: Icon(
+                            Icons.language,
+                            color: Theme.of(context).colorScheme.secondary,
+                          ),
+                          onChanged: (Language? language) async {
+                            if (language != null) {
+                              // log(language.languageCode.toString());
+                              // Locale _locale =
+                              // await setLocale(language.languageCode);
+                              // log('locale::${_locale.toString()}');
+                              // MyApp.setLocale(context, _locale);
+                              MyApp.setLocale(
+                                  context, Locale(language.languageCode));
+                            }
+                          },
+                          items: Language.languageList()
+                              .map<DropdownMenuItem<Language>>(
+                                (e) => DropdownMenuItem<Language>(
+                                  value: e,
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceAround,
+                                    children: <Widget>[
+                                      Text(
+                                        e.flag,
+                                        style: const TextStyle(fontSize: 30),
+                                      ),
+                                      Text(e.name)
+                                    ],
+                                  ),
                                 ),
-                              ),
-                            )
-                            .toList(),
+                              )
+                              .toList(),
+                        ),
                       )
                     ],
                   ),
