@@ -177,18 +177,18 @@ class _LoginScreenState extends State<LoginScreen> {
                     CircularProgressIndicator.adaptive(),
                   Column(
                     children: [
-                      Row(
-                        children: [
-                          CreateDivider(),
-                          Text(
-                            appLocalization.or,
-                          ),
-                          CreateDivider(),
-                        ],
-                      ),
-                      SignWithGoogleButton(
-                          mediaQuery: mediaQuery,
-                          appLocalization: appLocalization),
+                      // Row(
+                      //   children: [
+                      //     CreateDivider(),
+                      //     Text(
+                      //       appLocalization.or,
+                      //     ),
+                      //     CreateDivider(),
+                      //   ],
+                      // ),
+                      // SignWithGoogleButton(
+                      //     mediaQuery: mediaQuery,
+                      //     appLocalization: appLocalization),
                       Container(
                         padding: EdgeInsets.only(top: 12),
                         child: Row(

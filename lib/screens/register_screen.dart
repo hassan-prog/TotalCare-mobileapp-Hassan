@@ -339,55 +339,55 @@ class _RegisterFormScreenState extends State<RegisterFormScreen> {
                     SizedBox(
                       height: mediaQuery.size.height * 0.02,
                     ),
-                    const Divider(
-                      thickness: 2,
-                    ),
-                    SizedBox(
-                      height: mediaQuery.size.height * 0.02,
-                    ),
-                    TextButton(
-                      onPressed: () {
-                        print('tap');
-                      },
-                      style: TextButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(40),
-                        ),
-                        minimumSize: Size(
-                          mediaQuery.size.width * 0.85,
-                          mediaQuery.size.height * 0.06,
-                        ),
-                        side: const BorderSide(
-                          width: 0.8,
-                          color: Colors.grey,
-                        ),
-                      ),
-                      child: SizedBox(
-                        width: mediaQuery.size.width * 0.8,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Image.asset(
-                              'assets/images/google.png',
-                              height: 20,
-                              width: 20,
-                            ),
-                            const SizedBox(width: 10),
-                            Text(
-                              appLocalization.signUpWithGoogle,
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .button!
-                                  .copyWith(
-                                      fontSize: mediaQuery.size.width * 0.038),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      height: mediaQuery.size.height * 0.02,
-                    ),
+                    // const Divider(
+                    //   thickness: 2,
+                    // ),
+                    // SizedBox(
+                    //   height: mediaQuery.size.height * 0.02,
+                    // ),
+                    // TextButton(
+                    //   onPressed: () {
+                    //     print('tap');
+                    //   },
+                    //   style: TextButton.styleFrom(
+                    //     shape: RoundedRectangleBorder(
+                    //       borderRadius: BorderRadius.circular(40),
+                    //     ),
+                    //     minimumSize: Size(
+                    //       mediaQuery.size.width * 0.85,
+                    //       mediaQuery.size.height * 0.06,
+                    //     ),
+                    //     side: const BorderSide(
+                    //       width: 0.8,
+                    //       color: Colors.grey,
+                    //     ),
+                    //   ),
+                    //   child: SizedBox(
+                    //     width: mediaQuery.size.width * 0.8,
+                    //     child: Row(
+                    //       mainAxisAlignment: MainAxisAlignment.center,
+                    //       children: [
+                    //         Image.asset(
+                    //           'assets/images/google.png',
+                    //           height: 20,
+                    //           width: 20,
+                    //         ),
+                    //         const SizedBox(width: 10),
+                    //         Text(
+                    //           appLocalization.signUpWithGoogle,
+                    //           style: Theme.of(context)
+                    //               .textTheme
+                    //               .button!
+                    //               .copyWith(
+                    //                   fontSize: mediaQuery.size.width * 0.038),
+                    //         ),
+                    //       ],
+                    //     ),
+                    //   ),
+                    // ),
+                    // SizedBox(
+                    //   height: mediaQuery.size.height * 0.02,
+                    // ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
