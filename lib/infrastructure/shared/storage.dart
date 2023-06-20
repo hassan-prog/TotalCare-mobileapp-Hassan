@@ -64,4 +64,10 @@ class Storage {
     }
     return [];
   }
+
+  Future<void> deleteItemList() async {
+  await storage.delete(key: notificationsKey);
+}
+
+
 }
