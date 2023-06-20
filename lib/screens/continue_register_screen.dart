@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
@@ -13,7 +11,6 @@ import '../widgets/mobile_number_field.dart';
 import '../widgets/sign_button.dart';
 import '../providers/userProvider.dart';
 import '../providers/authProvider.dart';
-import '../screens/home_screen.dart';
 import '../screens/tabs_screen.dart';
 
 class ContinueRegisterScreen extends StatefulWidget {

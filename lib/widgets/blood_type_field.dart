@@ -1,9 +1,8 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 
 import '../models/user.dart';
 
+// ignore: must_be_immutable
 class BloodTypeInput extends StatefulWidget {
   final List bloodTypes;
   final TextEditingController bloodTypeController;

@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:grad_login/app_state.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -180,6 +178,7 @@ class _ShowInteractionsResultsScreenState
                                 .add(medicinesOfInteraction[k]['nameEn']);
                           }
 
+                          // ignore: dead_code
                           for (int i = 0; i < interactionList.length; i++) {
                             return Padding(
                               padding: const EdgeInsets.only(

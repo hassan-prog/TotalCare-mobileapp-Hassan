@@ -32,7 +32,6 @@ class _AddressScreenState extends State<AddressScreen> {
   @override
   Widget build(BuildContext context) {
     final addresses = Provider.of<Address>(context).items;
-    final String? errorMSG = Provider.of<Address>(context).errorMSG;
     final mediaQuery = MediaQuery.of(context).size;
 
     return SafeArea(

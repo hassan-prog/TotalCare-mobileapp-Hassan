@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:grad_login/infrastructure/medicine/medicine_service.dart';
 import 'package:grad_login/infrastructure/shared/storage.dart';

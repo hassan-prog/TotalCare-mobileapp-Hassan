@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'dart:io';
 
 import 'package:file_picker/file_picker.dart';
@@ -10,7 +9,7 @@ import 'package:provider/provider.dart';
 import '../providers/userProvider.dart';
 import '../models/user.dart';
 import '../widgets/show_custom_dialog.dart';
-import '../widgets/blood_type_field.dart';
+// import '../widgets/blood_type_field.dart';
 import '../widgets/date_selector.dart';
 import '../app_state.dart';
 
@@ -36,7 +35,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
   final bloodTypes = ['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-'];
   Color containerFillColor = Colors.grey.shade200;
   Color labelColor = Colors.grey;
-  String? gender, _age;
+  String? gender;
   FocusNode countryFocus = FocusNode();
   FocusNode userNameFocus = FocusNode();
   String? selectedDate;
@@ -628,97 +627,92 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                                       }
                                     },
                                   ),
-                                  const Divider(),
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.stretch,
-                                    children: <Widget>[
-                                      const Text(
-                                        'Health Information',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 18),
-                                      ),
-                                      const SizedBox(height: 10),
-                                      Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: <Widget>[
-                                          Expanded(
-                                            child: Column(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.start,
-                                              children: [
-                                                const SizedBox(height: 4),
-                                                Container(
-                                                  decoration: BoxDecoration(
-                                                      color: containerFillColor,
-                                                      border: Border.all(
-                                                          color: Colors.black),
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              10)),
-                                                  child: TextFormField(
-                                                    cursorColor: labelColor,
-                                                    decoration:
-                                                        const InputDecoration(
-                                                            border: InputBorder
-                                                                .none,
-                                                            hintText: "Age",
-                                                            contentPadding:
-                                                                EdgeInsets
-                                                                    .symmetric(
-                                                                        horizontal:
-                                                                            16),
-                                                            focusedBorder:
-                                                                InputBorder
-                                                                    .none),
-                                                    keyboardType:
-                                                        TextInputType.number,
-                                                    // validator: (value) {
-                                                    //   if (value!.isEmpty) {
-                                                    //     return "Age:";
-                                                    //   }
-                                                    //   return null;
-                                                    // },
-                                                    onSaved: (value) {
-                                                      setState(() {
-                                                        _age = value;
-                                                      });
-                                                    },
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                          const SizedBox(width: 8),
-                                          Expanded(
-                                            child: Container(
-                                              decoration: BoxDecoration(
-                                                border: Border.all(
-                                                    color: Colors.black),
-                                                borderRadius:
-                                                    BorderRadius.circular(12),
-                                              ),
-                                              child: BloodTypeInput(
-                                                backColor: containerFillColor,
-                                                bloodTypeController:
-                                                    bloodTypeController,
-                                                bloodTypes: bloodTypes,
-                                                user: _userData,
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      const SizedBox(height: 20),
-                                      ElevatedButton(
-                                        onPressed: () =>
-                                            onPressed(_userData!, userProvider),
-                                        child: const Text('Update Profile'),
-                                      )
-                                    ],
-                                  ),
+                                  // const Divider(),
+                              //     Column(
+                              //       crossAxisAlignment:
+                              //           CrossAxisAlignment.stretch,
+                              //       children: <Widget>[
+                              //         const Text(
+                              //           'Health Information',
+                              //           style: TextStyle(
+                              //               fontWeight: FontWeight.bold,
+                              //               fontSize: 18),
+                              //         ),
+                              //         const SizedBox(height: 10),
+                              //         Row(
+                              //           mainAxisAlignment:
+                              //               MainAxisAlignment.spaceBetween,
+                              //           children: <Widget>[
+                              //             Expanded(
+                              //               child: Column(
+                              //                 mainAxisAlignment:
+                              //                     MainAxisAlignment.start,
+                              //                 children: [
+                              //                   const SizedBox(height: 4),
+                              //                   Container(
+                              //                     decoration: BoxDecoration(
+                              //                         color: containerFillColor,
+                              //                         border: Border.all(
+                              //                             color: Colors.black),
+                              //                         borderRadius:
+                              //                             BorderRadius.circular(
+                              //                                 10)),
+                              //                     child: TextFormField(
+                              //                       cursorColor: labelColor,
+                              //                       decoration:
+                              //                           const InputDecoration(
+                              //                               border: InputBorder
+                              //                                   .none,
+                              //                               hintText: "Age",
+                              //                               contentPadding:
+                              //                                   EdgeInsets
+                              //                                       .symmetric(
+                              //                                           horizontal:
+                              //                                               16),
+                              //                               focusedBorder:
+                              //                                   InputBorder
+                              //                                       .none),
+                              //                       keyboardType:
+                              //                           TextInputType.number,
+                              //                       // validator: (value) {
+                              //                       //   if (value!.isEmpty) {
+                              //                       //     return "Age:";
+                              //                       //   }
+                              //                       //   return null;
+                              //                       // },
+                              //                       onSaved: (value) {
+                              //                         setState(() {
+                              //                           _age = value;
+                              //                         });
+                              //                       },
+                              //                     ),
+                              //                   ),
+                              //                 ],
+                              //               ),
+                              //             ),
+                              //             const SizedBox(width: 8),
+                              //             Expanded(
+                              //               child: Container(
+                              //                 decoration: BoxDecoration(
+                              //                   border: Border.all(
+                              //                       color: Colors.black),
+                              //                   borderRadius:
+                              //                       BorderRadius.circular(12),
+                              //                 ),
+                              //                 child: BloodTypeInput(
+                              //                   backColor: containerFillColor,
+                              //                   bloodTypeController:
+                              //                       bloodTypeController,
+                              //                   bloodTypes: bloodTypes,
+                              //                   user: _userData,
+                              //                 ),
+                              //               ),
+                              //             ),
+                              //           ],
+                              //         ),
+                              //         const SizedBox(height: 20),
+                              //       ],
+                              //     ),
                                 ],
                               ),
                             ),
@@ -729,6 +723,13 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                   ),
                 ),
               ),
+        bottomNavigationBar: ElevatedButton(
+          onPressed: () => onPressed(_userData!, userProvider),
+          child: Text(
+            'Update Profile',
+            style: TextStyle(color: Theme.of(context).colorScheme.primary),
+          ),
+        ),
       ),
     );
   }
@@ -748,6 +749,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
   }
 }
 
+// ignore: must_be_immutable
 class DialogSelection extends StatelessWidget {
   VoidCallback function;
   String text;

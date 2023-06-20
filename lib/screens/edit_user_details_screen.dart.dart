@@ -156,6 +156,7 @@ class _EditUserDetailsScreenState extends State<EditUserDetailsScreen> {
                                 if (value == null || value.isEmpty) {
                                   return 'Phone Number cannot be empty';
                                 }
+                                return null;
                               },
                               decoration: const InputDecoration(
                                 suffixIcon: Icon(Icons.phone),

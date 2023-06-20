@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:grad_login/providers/medicineProvider.dart';
 import 'package:provider/provider.dart';
 
+// ignore: must_be_immutable
 class NotificationIcon extends StatefulWidget {
   var counter = 0;
   NotificationIcon({super.key});

@@ -229,6 +229,7 @@ class _EditAddressScreenState extends State<EditAddressScreen> {
                                 if (value == null || value.isEmpty) {
                                   return 'Phone Number cannot be empty';
                                 }
+                                return null;
                               },
                               decoration: const InputDecoration(
                                 prefixIcon: Icon(Icons.phone),

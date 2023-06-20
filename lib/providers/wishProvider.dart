@@ -95,6 +95,7 @@ class Wish with ChangeNotifier {
 
     final url = Uri.parse('${Config.wishList}$id/items/${prodID['id']}/');
     log(url.toString());
+    // ignore: unused_local_variable
     final response = await http.delete(
       url,
       headers: {

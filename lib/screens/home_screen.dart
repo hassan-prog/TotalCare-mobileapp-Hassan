@@ -1,14 +1,10 @@
 import 'dart:async';
-import 'dart:developer';
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:grad_login/screens/interaction_screen.dart';
-import 'package:grad_login/screens/tabs_screen.dart';
 import 'package:provider/provider.dart';
 
-import '../keys.dart';
 import '../providers/categoriesProvider.dart';
 import '../providers/userProvider.dart';
 
@@ -33,21 +29,14 @@ class _HomeScreenState extends State<HomeScreen> {
   dynamic categoriesProvider;
 
   TextEditingController searchController = TextEditingController();
-  final FocusNode _focusNode = FocusNode();
 
   Map<String, dynamic>? filteredCategories;
-  bool _isVisible = true;
   List<dynamic>? results;
 
   @override
   void initState() {
     scrollController.addListener(_scrollListener);
     _loadCategories();
-    _focusNode.addListener(() {
-      setState(() {
-        _isVisible = _focusNode.hasFocus;
-      });
-    });
     super.initState();
   }
 

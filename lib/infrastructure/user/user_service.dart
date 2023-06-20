@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'dart:convert';
 import 'dart:io';
 
@@ -241,6 +240,7 @@ class UserService {
       token = value;
     });
 
+    // ignore: unused_local_variable
     final response = await http.delete(
       url,
       headers: {

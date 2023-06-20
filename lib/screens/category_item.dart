@@ -4,7 +4,6 @@ import 'package:provider/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
-import 'medicine_screen.dart';
 import '../providers/drugProvider.dart';
 import '../providers/categoriesProvider.dart';
 
@@ -19,10 +18,8 @@ class _CategoryItemState extends State<CategoryItem> {
   @override
   Widget build(BuildContext context) {
     final appLocalization = AppLocalizations.of(context)!.localeName;
-
     final categoriesProvider = Provider.of<Categories>(context);
     final categories = categoriesProvider.catItems;
-    final mediaquery = MediaQuery.of(context).size;
 
     return GridView.builder(
       shrinkWrap: true,

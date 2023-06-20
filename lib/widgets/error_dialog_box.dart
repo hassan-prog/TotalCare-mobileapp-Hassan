@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class CustomAlertDialog extends StatelessWidget {
   String? title;
   String? content;

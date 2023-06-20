@@ -1,10 +1,9 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 import '../models/user.dart';
 
+// ignore: must_be_immutable
 class DateSelector extends StatefulWidget {
   final BuildContext context;
   final TextEditingController dateController;

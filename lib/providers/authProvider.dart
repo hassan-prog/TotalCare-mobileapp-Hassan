@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 
 import '../infrastructure/auth/authService.dart';
@@ -65,6 +63,7 @@ class AuthProvider with ChangeNotifier {
   Future<void> contRegister(User user) async {
     appState = AppState.loading;
     notifyListeners();
+    // ignore: unused_local_variable
     final responseData = await authService.continueRegistration(user);
     appState = AppState.done;
     notifyListeners();

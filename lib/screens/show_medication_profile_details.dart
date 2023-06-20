@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../app_state.dart';
-import '../widgets/error_dialog_box.dart';
 import '../providers/interactionsProvider.dart';
 import '../screens/show_interactions_results_screen.dart';
 import '../screens/edit_medication.dart';

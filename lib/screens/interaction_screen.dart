@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
@@ -51,6 +50,7 @@ class _InteractionScreenState extends State<InteractionScreen> {
     Map<String, dynamic>? filteredMeds;
     Timer? debounce;
 
+    // ignore: dead_code
     debounce?.cancel(); // Cancel previous debounce timer
     debounce = Timer(const Duration(milliseconds: 300), () async {
       // Perform search/filtering here

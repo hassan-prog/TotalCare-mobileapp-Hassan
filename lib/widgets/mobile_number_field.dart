@@ -1,11 +1,10 @@
-import 'dart:developer';
-
 import 'package:country_picker/country_picker.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 
 import '../models/user.dart';
 
+// ignore: must_be_immutable
 class MobileNumberField extends StatefulWidget {
   final TextEditingController countryController;
   final TextEditingController phoneController;
@@ -31,7 +30,6 @@ class _MobileNumberFieldState extends State<MobileNumberField> {
   Widget build(BuildContext context) {
     final appLocalization = AppLocalizations.of(context)!;
 
-    String countryName = appLocalization.countryName;
     Color containerFillColor = Colors.grey.shade100;
     Color labelColor = Colors.grey;
     return Padding(
@@ -63,7 +61,6 @@ class _MobileNumberFieldState extends State<MobileNumberField> {
                 onSelect: (Country country) {
                   country.flagEmoji;
                   widget.countryController.text = '+${country.phoneCode}';
-                  countryName = '${country.flagEmoji}  ${country.name}';
                   setState(() {});
                 },
               ),

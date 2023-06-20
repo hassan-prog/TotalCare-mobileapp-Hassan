@@ -171,6 +171,7 @@ class _AddAddressScreenState extends State<AddAddressScreen> {
                     if (value == null || value.isEmpty) {
                       return 'Phone Number cannot be empty';
                     }
+                    return null;
                   },
                 ),
                 const SizedBox(height: 16.0),
