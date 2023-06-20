@@ -116,5 +116,6 @@ class AuthService {
 
   Future<void> logout() async {
     await storage.removeToken();
+    await storage.deleteItemList();
   }
 }
