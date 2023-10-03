@@ -1,4 +1,7 @@
-![Total_care](https://github.com/hassan-prog/TotalCare-mobileapp-Hassan/assets/55570333/966eede9-7697-441d-bdcd-c9591ebe917c)
+<div align="center">
+  <img src="https://github.com/hassan-prog/TotalCare-mobileapp-Hassan/assets/55570333/966eede9-7697-441d-bdcd-c9591ebe917c" alt="Total_care">
+</div>
+
 # Total care
 A mobile application that helps patients and doctors know the contradictions/interactions between two or more medications or drugs, and is also an E-commerce.
 
