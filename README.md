@@ -1,6 +1,6 @@
+![Total_care](https://github.com/hassan-prog/TotalCare-mobileapp-Hassan/assets/55570333/966eede9-7697-441d-bdcd-c9591ebe917c)
 # Total care
-
-A new Flutter project.
+A mobile application that helps patients and doctors know the contradictions/interactions between two or more medications or drugs, and is also an E-commerce.
 
 ## Getting Started
 
